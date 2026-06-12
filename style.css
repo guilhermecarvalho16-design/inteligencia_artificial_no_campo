@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#2e8b57;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu a:hover{
+    color:#d4ffd4;
+}
+
+.hamburguer{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+.hero{
+    height:70vh;
+    background:linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200");
+    
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+.conteudo{
+    padding:60px 10%;
+}
+
+.conteudo h2{
+    margin-bottom:20px;
+    color:#2e8b57;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    flex:1;
+    min-width:250px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.dicas{
+    text-align:center;
+    padding:60px 20px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    background:#2e8b57;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#256f47;
+}
+
+#resultado{
+    margin-top:20px;
+    font-size:1.1rem;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .hamburguer{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        right:0;
+        width:220px;
+        background:#2e8b57;
+        padding:20px;
+    }
+
+    .menu.ativo{
+        display:flex;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+}
